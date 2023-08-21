@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const dato123 = localStorage.getItem("dato");
-  document.getElementById("data").innerHTML = dato123;
+  const cantidadDatos = localStorage.getItem("cantidadDatos");
+  for (let index = 1; index <= cantidadDatos; index++) {
+    const element = localStorage.getItem(`dato${index}`);;
+    document.getElementById("data").innerHTML += element + "</br>";
+  }
 });
